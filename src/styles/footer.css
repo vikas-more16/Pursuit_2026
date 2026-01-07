@@ -1,0 +1,19 @@
+.footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  color: #feffff;
+  padding: 18px 12px 20px;
+  background: transparent;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.footer p {
+  pointer-events: auto;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.45);
+}

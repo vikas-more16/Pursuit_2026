@@ -1,0 +1,91 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 16px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(10px);
+  z-index: 100;
+}
+.nav-links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.nav-actions button {
+  margin-left: 12px;
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* Futuristic angled button */
+.neo-btn {
+  padding: 8px 22px;
+  font-family: "Orbitron", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #6f4cff, #9b7bff);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  cursor: pointer;
+
+  /* 🔥 EXACT SHAPE */
+  clip-path: polygon(12% 0%, 100% 0%, 88% 100%, 0% 100%);
+
+  transition: all 0.3s ease;
+}
+
+/* Hover glow */
+.neo-btn:hover {
+  box-shadow: 0 0 14px rgba(127, 92, 255, 0.8);
+  background: linear-gradient(135deg, #8b6cff, #b39cff);
+}
+
+/* Click effect */
+.neo-btn:active {
+  transform: scale(0.96);
+}
+
+.nav-logo img {
+  height: 42px; /* perfect navbar height */
+  width: auto; /* keeps aspect ratio */
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center; /* vertical alignment */
+  gap: 12px; /* space between logo & text */
+}
+
+/* Logo */
+.nav-logo img {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Title text */
+.nav-title {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #ffffff;
+  margin: 0; /* remove default h1 margin */
+  line-height: 1; /* aligns text with logo */
+}
