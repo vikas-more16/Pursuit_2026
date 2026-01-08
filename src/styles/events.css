@@ -26,8 +26,12 @@
 .events-row-wrapper {
   width: 100%;
   position: relative;
-  margin: 30px 140px;
+  margin: 30px auto;
   z-index: 2;
+
+  /* Center the scrolling row on any screen size */
+  display: flex;
+  justify-content: center;
 }
 
 /* Row container - holds all cards */

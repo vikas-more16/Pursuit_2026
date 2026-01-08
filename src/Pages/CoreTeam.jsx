@@ -26,15 +26,16 @@ const coreHeads = [
     phone: "+91 9000000002",
   },
   {
-    name: "Sanskruti Kakade",
-    role: "Student Co-Coordinator",
-    phone: "+91 9000000003",
-  },
-  {
     name: "Shripad Ingle",
     role: "Management Team Head",
     phone: "+91 9000000004",
   },
+  {
+    name: "Sanskruti Kakade",
+    role: "Student Co-Coordinator",
+    phone: "+91 9000000003",
+  },
+  
   {
     name: "Dhanashri Borde",
     role: "Management Team Head",
