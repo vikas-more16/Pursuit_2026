@@ -3,7 +3,23 @@ import "../styles/gallery.css";
 import "../styles/coreteam.css";
 import bgVideo from "../assets/bgpursuit.mp4";
 import HeadPlaceholder from "../assets/pursuitlogo.png";
+import Mentor1Image from "../assets/mentor/mentor1.png";
+import Mentor2Image from "../assets/mentor/mentor2.jpg";
 
+const mentors = [
+  {
+    name: "Dr. S. B. Somani",
+    role: "Principal SSGMCE SHEGAON",
+    image: Mentor1Image,
+    words: "Your inspirational words or quote here. This section will display horizontally in the card.",
+  },
+  {
+    name: "Dr. K. V. Chandan",
+    role: "Faculty Co-Ordinator Pursuit'26",
+    image: Mentor2Image,
+    words: "Your inspirational words or quote here. This section will display horizontally in the card.",
+  },
+];
 const coreHeads = [
   {
     name: "Vikas Gawade",
@@ -83,6 +99,27 @@ const CoreTeam = () => {
         muted
         playsInline
       />
+      <div className="gallery-title-card">
+        <span className="gallery-title-text">Mentors</span>
+      </div>
+      <div className="coreteam-wrapper">
+        <div className="coreteam-grid">
+          {mentors.map((mentor) => (
+            <article key={mentor.name} className="core-card mentor-card">
+              <div className="mentor-card-left">
+                <div className="mentor-avatar">
+                  <img src={mentor.image} alt={mentor.name} />
+                </div>
+                <h3 className="core-name">{mentor.name}</h3>
+                <p className="mentor-role">{mentor.role}</p>
+              </div>
+              <div className="mentor-card-right">
+                <p className="mentor-words">{mentor.words}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
 
       <div className="gallery-title-card">
         <span className="gallery-title-text">Core Team</span>
