@@ -1,3 +1,5 @@
+/* ... existing styles ... */
+
 .hero {
   position: relative;
   min-height: 100vh;
@@ -11,6 +13,8 @@
   color: #fff;
   text-align: center;
   overflow: hidden;
+  padding: 0 20px;
+  /* Prevent text touching edges */
 }
 
 /* Background video */
@@ -47,6 +51,8 @@
 .pursuit-name {
   max-width: 520px;
   width: 90%;
+  height: auto;
+  /* ensure aspect ratio */
 }
 
 .hero-tagline {
@@ -62,9 +68,11 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 600px; /* adjust if needed */
+  width: 600px;
+  /* adjust if needed */
   opacity: 1;
-  z-index: -1; /* 🔥 behind hero-center content only */
+  z-index: -1;
+  /* 🔥 behind hero-center content only */
   pointer-events: none;
 }
 
@@ -72,5 +80,28 @@
 @media (max-width: 768px) {
   .blackhole-bg {
     width: 300px;
+    padding-top: 50px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .hero-tagline {
+    font-size: 16px;
+    /* Decrease font size for mobile */
+    margin-top: 12px;
+  }
+
+  .pursuit-name {
+    width: 80%;
+    /* Slightly smaller on mobile to not overwhelm */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-tagline {
+    font-size: 14px;
+    letter-spacing: 0.5px;
   }
 }

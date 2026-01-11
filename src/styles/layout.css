@@ -3,10 +3,26 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 .content-shell {
   flex: 1;
   display: flex;
   flex-direction: column;
+}
+
+/* Ensure content is not hidden behind the fixed bottom sidebar on mobile */
+@media (max-width: 576px) {
+  .app-shell {
+    padding-bottom: 80px;
+    /* Add padding for fixed sidebar */
+  }
+
+  /* Reset order if it was set */
+  .content-shell {
+    order: unset;
+  }
 }

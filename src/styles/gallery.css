@@ -37,11 +37,23 @@
   .gallery-title-card {
     width: 300px;
     height: 56px;
+    margin: 20px auto 30px auto;
   }
 
   .gallery-title-text {
     font-size: 22px;
     letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-title-card {
+    width: 260px;
+    height: 50px;
+  }
+
+  .gallery-title-text {
+    font-size: 18px;
   }
 }
 
@@ -109,6 +121,7 @@
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(-50%);
   }
@@ -127,9 +140,27 @@
   }
 }
 
+@media (max-width: 480px) {
+  .gallery-card {
+    width: 160px;
+    height: 110px;
+  }
+
+  .gallery-track {
+    gap: 8px;
+  }
+
+  .gallery-wrapper:nth-of-type(2) .gallery-track,
+  .gallery-wrapper:nth-of-type(3) .gallery-track {
+    transform: translateX(-40px);
+  }
+}
+
 /* Outer layered card */
 .video-layer-card {
   width: 450px;
+  max-width: 90%;
+  /* Ensure it doesn't overflow */
   height: 300px;
   margin-top: 90px;
   position: relative;
@@ -143,11 +174,21 @@
   overflow: hidden;
 }
 
+@media (max-width: 480px) {
+  .video-layer-card {
+    height: 220px;
+    /* Smaller height for mobile */
+    margin-top: 0;
+    /* Reset margin as handled by overlay container */
+  }
+}
+
 /* Video inside card */
 .video-layer {
   width: 100%;
   height: 100%;
-  position: relative; /* 🔥 NOT fixed */
+  position: relative;
+  /* 🔥 NOT fixed */
   z-index: 1;
   object-fit: cover;
 }
@@ -166,9 +207,31 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 20; /* above gallery rows */
+  z-index: 20;
+  /* above gallery rows */
 
-  pointer-events: none; /* optional: allow scroll through */
+  pointer-events: none;
+  /* optional: allow scroll through */
+}
+
+/* On mobile/tablet, make video distinct part of flow (no overlap) */
+@media (max-width: 968px) {
+  .gallery-video-overlay {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 40px auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    pointer-events: auto;
+  }
+
+  /* Remove card top margin since wrapper has margin */
+  .video-layer-card {
+    margin-top: 0;
+  }
 }
 
 /* Gallery section must be positioning context */
@@ -186,7 +249,8 @@
   height: 100%;
   object-fit: cover;
 
-  z-index: -3; /* 🔥 behind everything */
+  z-index: -3;
+  /* 🔥 behind everything */
 }
 
 /* Optional dark overlay for readability */
@@ -203,5 +267,6 @@
   width: 100%;
   height: 100%;
   border: none;
-  pointer-events: none; /* so hover scroll doesn’t break */
+  pointer-events: none;
+  /* so hover scroll doesn’t break */
 }

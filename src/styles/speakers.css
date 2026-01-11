@@ -24,11 +24,9 @@
 .speaker-card {
   padding: 26px 20px;
   border-radius: 16px;
-  background: linear-gradient(
-    135deg,
-    rgba(30, 30, 60, 0.65) 0%,
-    rgba(10, 10, 30, 0.8) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(30, 30, 60, 0.65) 0%,
+      rgba(10, 10, 30, 0.8) 100%);
   border: 1px solid rgba(180, 180, 255, 0.35);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6),
     0 0 25px rgba(95, 110, 255, 0.35);
@@ -88,5 +86,12 @@
   .speaker-avatar {
     width: 96px;
     height: 96px;
+  }
+}
+
+@media (max-width: 480px) {
+  .speakers-grid {
+    grid-template-columns: 1fr;
+    /* Stack singly on very small screens */
   }
 }
