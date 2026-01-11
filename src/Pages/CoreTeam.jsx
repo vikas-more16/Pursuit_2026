@@ -66,7 +66,7 @@ const coreHeads = [
     instagram: "https://www.instagram.com/sanskrutikakade/",
     linkedin: "https://www.linkedin.com/in/sanskruti-kakade-566a1a260/",
   },
-  
+
   {
     name: "Dhanashri Borde",
     role: "Management Team Head",

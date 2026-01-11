@@ -1,9 +1,25 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/gallery.css";
 import "../styles/accommodation.css";
 import bgVideo from "../assets/bgpursuit.mp4";
 import Rocket from "../assets/Roketpng.png";
 
 const Accomodation = () => {
+  const [isLaunching, setIsLaunching] = useState(false);
+  const navigate = useNavigate();
+
+  const handleRocketClick = () => {
+    if (isLaunching) return; // Prevent double clicks
+
+    setIsLaunching(true);
+
+    // Navigate after animation (1s)
+    setTimeout(() => {
+      navigate("/register");
+    }, 800);
+  };
+
   return (
     <section className="gallery-section">
       <video
@@ -45,7 +61,10 @@ const Accomodation = () => {
         </div>
       </div>
       {/* 🚀 Rocket Animation */}
-      <div className="accommodation-rocket">
+      <div
+        className={`accommodation-rocket ${isLaunching ? "rocket-launch" : ""}`}
+        onClick={handleRocketClick}
+      >
         <img src={Rocket} alt="Rocket" />
       </div>
     </section>

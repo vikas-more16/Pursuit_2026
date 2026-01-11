@@ -284,6 +284,26 @@
     width: 100%;
     justify-content: center;
   }
+
+  .contact-info-title,
+  .contact-form-title {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .contact-info-section,
+  .contact-form-section {
+    margin-top: 30px;
+  }
+
+  .contact-info-item {
+    padding: 16px;
+    gap: 14px;
+  }
+
+  .contact-info-text {
+    font-size: 14px;
+  }
 }
 
 .phone-multiple {

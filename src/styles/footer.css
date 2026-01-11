@@ -14,3 +14,10 @@
   pointer-events: auto;
   text-shadow: 0 0 8px rgba(0, 0, 0, 0.45);
 }
+
+@media (max-width: 576px) {
+  .footer {
+    position: relative;
+    padding-bottom: 0px;
+  }
+}

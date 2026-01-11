@@ -158,9 +158,12 @@
 }
 
 @keyframes shimmer {
-  0%, 100% {
+
+  0%,
+  100% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
@@ -182,9 +185,12 @@
 }
 
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0px) rotate(0deg);
   }
+
   50% {
     transform: translateY(-10px) rotate(5deg);
   }
@@ -279,5 +285,23 @@
 
   .about-highlight-amount {
     font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-subtitle {
+    font-size: 16px;
+  }
+
+  .about-feature-icon {
+    font-size: 28px;
+  }
+
+  .about-highlight-card {
+    padding: 20px 24px;
+  }
+
+  .about-highlight-amount {
+    font-size: 32px;
   }
 }

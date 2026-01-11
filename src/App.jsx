@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 import MainLayout from "./Layout/MainLayout";
+import Loader from "./Components/Loader";
 
 import Home from "./Pages/Home";
 import Gallery from "./Pages/Gallery";
@@ -16,28 +18,40 @@ import About from "./Pages/About";
 import CoreTeam from "./Pages/CoreTeam";
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        {/* Pages WITH Navbar, Sidebar, Footer */}
-        <Route element={<MainLayout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/accomodation" element={<Accomodation />} />
-          <Route path="/events" element={<Events />} />
-          <Route path="/workshops" element={<Workshops />} />
-          <Route path="/speakers" element={<Speakers />} />
-          <Route path="/sponser" element={<Sponsers />} />
-          <Route path="/contact" element={<ContactUs />} />
-          <Route path="/coreteam" element={<CoreTeam />} />
-        </Route>
+  const [loading, setLoading] = useState(true);
 
-        {/* Pages WITHOUT Navbar / Sidebar / Footer */}
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-      </Routes>
-    </BrowserRouter>
+  // You can remove this useEffect if you only want the loader to finish based on its own timer
+  // But having it here gives you control if you want to load real data later.
+  // For now, the Loader component handles its own completion callback.
+
+  return (
+    <>
+      {loading ? (
+        <Loader onComplete={() => setLoading(false)} />
+      ) : (
+        <BrowserRouter>
+          <Routes>
+            {/* Pages WITH Navbar, Sidebar, Footer */}
+            <Route element={<MainLayout />}>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/gallery" element={<Gallery />} />
+              <Route path="/accomodation" element={<Accomodation />} />
+              <Route path="/events" element={<Events />} />
+              <Route path="/workshops" element={<Workshops />} />
+              <Route path="/speakers" element={<Speakers />} />
+              <Route path="/sponser" element={<Sponsers />} />
+              <Route path="/contact" element={<ContactUs />} />
+              <Route path="/coreteam" element={<CoreTeam />} />
+            </Route>
+
+            {/* Pages WITHOUT Navbar / Sidebar / Footer */}
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+          </Routes>
+        </BrowserRouter>
+      )}
+    </>
   );
 }
 
