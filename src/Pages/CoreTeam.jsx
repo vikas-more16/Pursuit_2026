@@ -26,6 +26,9 @@ import KrushnagopalAgnihotriImage from "../assets/coreteam/KrushnagopalAgnihotri
 import SharayuMhaskeImage from "../assets/coreteam/SharayuMhaske.webp";
 import VikasMoreImage from "../assets/coreteam/VikasMore.webp";
 import PiyushPoteImage from "../assets/coreteam/PiyushPote.webp";
+import VikasGawadeImage from "../assets/coreteam/Vikas Gawade.webp";
+import RutujaDalalImage from "../assets/coreteam/Rutuja Dalal.webp";
+import ShraddhaKapleImage from "../assets/coreteam/Shraddha kaple.webp";
 
 
 const mentors = [
@@ -44,7 +47,7 @@ const coreHeads = [
     {
         name: "Vikas Gawade",
         role: "Student Co-Ordinator",
-        image: HeadPlaceholder,
+        image: VikasGawadeImage,
         instagram: "https://www.instagram.com/vikasgawade166/",
         linkedin: "https://www.linkedin.com/in/vikas-gawade-166/",
     },
@@ -212,14 +215,14 @@ const coreHeads = [
     {
         name: "Rutuja Dalal",
         role: "Report Writing Head",
-        image: HeadPlaceholder,
+        image: RutujaDalalImage,
         instagram: "https://www.instagram.com/",
         linkedin: "https://www.linkedin.com/",
     },
     {
         name: "Shraddha Kaple",
         role: "Report Writing Head",
-        image: HeadPlaceholder,
+        image: ShraddhaKapleImage,
         instagram: "https://www.instagram.com/",
         linkedin: "https://www.linkedin.com/",
     },
