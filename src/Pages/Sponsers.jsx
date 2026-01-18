@@ -1,6 +1,6 @@
 import "../styles/gallery.css";
 import "../styles/sponsors.css";
-import bgVideo from "../assets/bgpursuit.mp4";
+import bgVideo from "../assets/bgpursuit.webm";
 import SponsorImg from "../assets/pursuitlogo.png";
 
 const sponsors = [

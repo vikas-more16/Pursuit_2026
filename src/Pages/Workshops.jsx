@@ -1,6 +1,6 @@
 import "../styles/gallery.css";
 import "../styles/events.css";
-import bgVideo from "../assets/bgpursuit.mp4";
+import bgVideo from "../assets/bgpursuit.webm";
 import Poster from "../assets/Events/event1.png";
 
 const Workshops = () => {

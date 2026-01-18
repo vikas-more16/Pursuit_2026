@@ -1,6 +1,6 @@
 import "../styles/hero.css";
 import PursuitName from "../assets/PursuitName.png";
-import bgVideo from "../assets/bgpursuit.mp4";
+import bgVideo from "../assets/bgpursuit.webm";
 import Blackhole from "../assets/Blackhole.png";
 
 const Home = () => {

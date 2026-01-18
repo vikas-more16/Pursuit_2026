@@ -1,7 +1,7 @@
 import { FaGoogle, FaArrowLeft } from "react-icons/fa6";
 // import "../styles/gallery.css";
 import "../styles/auth.css";
-import bgVideo from "../assets/bgpursuit.mp4";
+import bgVideo from "../assets/bgpursuit.webm";
 import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 

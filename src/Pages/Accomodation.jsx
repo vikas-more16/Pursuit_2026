@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/gallery.css";
 import "../styles/accommodation.css";
-import bgVideo from "../assets/bgpursuit.mp4";
+import bgVideo from "../assets/bgpursuit.webm";
 import Rocket from "../assets/Roketpng.png";
 
 const Accomodation = () => {

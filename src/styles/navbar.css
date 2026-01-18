@@ -116,8 +116,8 @@
   display: none;
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
+/* Tablet & Mobile Responsive */
+@media (max-width: 1024px) {
   .navbar {
     padding: 16px 20px;
   }

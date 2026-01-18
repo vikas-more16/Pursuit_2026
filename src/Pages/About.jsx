@@ -7,7 +7,7 @@ import {
 } from "react-icons/fa";
 import "../styles/gallery.css";
 import "../styles/about.css";
-import bgVideo from "../assets/bgpursuit.mp4";
+import bgVideo from "../assets/bgpursuit.webm";
 
 const About = () => {
   const features = [

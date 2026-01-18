@@ -14,8 +14,8 @@
   flex-direction: column;
 }
 
-/* Ensure content is not hidden behind the fixed bottom sidebar on mobile */
-@media (max-width: 576px) {
+/* Ensure content is not hidden behind the fixed bottom sidebar on mobile/tablet */
+@media (max-width: 1024px) {
   .app-shell {
     padding-bottom: 80px;
     /* Add padding for fixed sidebar */

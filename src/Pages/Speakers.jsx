@@ -1,6 +1,6 @@
 import "../styles/gallery.css";
 import "../styles/speakers.css";
-import bgVideo from "../assets/bgpursuit.mp4";
+import bgVideo from "../assets/bgpursuit.webm";
 import SpeakerImg from "../assets/pursuitlogo.png";
 
 const speakers = [
